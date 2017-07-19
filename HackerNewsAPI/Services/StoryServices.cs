@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 
-namespace HackerNewsAPI.Scripts
+namespace HackerNewsAPI.Services
 {
     public class StoryServices
     {

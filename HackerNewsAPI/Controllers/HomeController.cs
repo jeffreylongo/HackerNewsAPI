@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using HackerNewsAPI.Services;
 using System.Web.Mvc;
 
 namespace HackerNewsAPI.Controllers
@@ -10,7 +7,10 @@ namespace HackerNewsAPI.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            //get the news
+            var hotNews = StoryServices.GetStories();
+
+            return View(hotNews);
         }
 
         public ActionResult About()
