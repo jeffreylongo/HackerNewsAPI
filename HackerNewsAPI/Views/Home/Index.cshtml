@@ -5,6 +5,15 @@
     ViewBag.Title = "Home Page";
 }
 
+<h2>Search:</h2>
+
+@*add search function here*@
+<div class="row">
+    <input class="input-group" type="text" id="needle" />
+    <button id="searchButton" onclick="searchNews();"><i class="glyphicon glyphicon-search"></i> </button>
+</div>
+
+@*loop stories here*@
 @foreach (var story in Model)
 {
     <h3>
@@ -16,3 +25,19 @@
     <h4><a href="@story.URL">Click for story</a>
     </h4>
 }
+
+@*send partial view serch results here*@
+<div id="results">
+    @foreach (var story in Model)
+    {
+        <h3>
+            @story.Title
+        </h3>
+        <h4>
+            @story.Author
+        </h4>
+        <h4>
+            <a href="@story.URL">Click for story</a>
+        </h4>
+    }
+</div>

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<HackerNewsAPI.Models.Story>
+
+@foreach (var story in Model)
+{
+    <h3>
+        @story.Title
+    </h3>
+    <h4>
+        @story.Author
+    </h4>
+    <h4>
+        <a href="@story.URL">Click for story</a>
+    </h4>
+}
