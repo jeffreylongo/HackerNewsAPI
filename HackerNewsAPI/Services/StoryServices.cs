@@ -13,7 +13,7 @@ namespace HackerNewsAPI.Services
     {
         public static IEnumerable<Story> GetStories()
         {
-            var url = $"https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty";
+            var url = $"https://newsapi.org/v1/articles?source=hacker-news&sortBy=top&apiKey=d83621ac9a174c91823a72f6e131fb00";
             var request = WebRequest.Create(url);
             var response = request.GetResponse();
             var rawResponse = String.Empty;
